@@ -1,0 +1,21 @@
+    
+    <h4 class="m-t-3">Productos Cargados</h4>
+    <table class="table mb-4">
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Precio</th>
+                <th>Icono</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#productos}}
+            <tr>
+                <td>{{title}}</td>
+                <td>{{price}}</td>
+                <td><img src={{icon}} alt="" sizes="" srcset=""></td>
+            </tr>
+            {{/productos}}
+        </tbody>
+    </table>
+

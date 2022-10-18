@@ -1,0 +1,26 @@
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Precio</th>
+                <th>Icono</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#productos}}
+            <tr>
+                <td>{{title}}</td>
+                <td>{{price}}</td>
+                <td><img src={{icon}} alt="" sizes="" srcset=""></td>
+            </tr>
+            {{/productos}}
+        </tbody>
+    </table>
+    <button class="btn btn-primary" onclick="move()">Cargar Producto</button>
+</body>
+<script>
+    function move() {
+        window.location.href = '/'
+    }
+</script>

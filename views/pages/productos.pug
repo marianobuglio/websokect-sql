@@ -1,0 +1,22 @@
+html
+    include ../includes/head.pug 
+    body(class="container")
+        h1 Productos 
+        table(class="table table-dark") 
+            thead 
+                tr 
+                    th titulo
+                    th Precio 
+                    th Icono
+            tbody 
+                each p in productos
+                    tr
+                        td=p.title
+                        td=p.price
+                        td
+                            img(src=p.icon)
+        button(class="btn btn-success" onclick="move()") Cargar Productos
+    script.
+        function move() {
+        window.location.href = '/'
+        }

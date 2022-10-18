@@ -1,0 +1,30 @@
+html
+  include includes/head.pug 
+  body(class="container")
+        .modal-dialog
+        .modal-content
+
+          .modal-header
+            h4#myModalLabel.modal-title
+              | Nuevo Producto
+          // Modal Body
+          .modal-body
+            form(role='form' method='post' action='/productos' enctype="application/x-www-form-urlencoded")
+              div.form-group
+                label(for='title') Titulo:
+                input#name.form-control(type='text', placeholder='Titulo' name='title' )
+              div.form-group
+                label(for='price') Precio:
+                input#name.form-control(type='number', placeholder='Precio' name='price' )
+              div.form-group
+                label(for='icon') Icon:
+                input#name.form-control(type='text', placeholder='Icono' name='icon')
+              button.btn.btn-primary(type="submit", ) Submit
+              button.btn.btn-default(type="button", data-dismiss="modal" onclick="move()") 
+                | Ir a listado
+  script.
+    function move() {
+      window.location.href = '/productos'
+    }
+
+        

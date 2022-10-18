@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+<body class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Precio</th>
+                <th>Icono</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% productos.forEach((p)=> { %>
+                <tr>
+                    <td><%= p.title %></td>
+                    <td><%= p.price %></td>
+                    <td><img src=<%= p.icon %> alt=""></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <button class="btn btn-primary" onclick="move()">Cargar Producto</button>
+</body>
+<script>
+    function move() {
+        window.location.href = '/'
+    }
+
+</script>
+
+</html>
